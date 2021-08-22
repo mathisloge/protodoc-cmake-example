@@ -8,7 +8,7 @@
     },
     "lang": "lang_en.json",
     "custom": "custom.json",
-    "output": "${CMAKE_CURRENT_BINARY_DIR}/generated",
+    "output": "${CMAKE_CURRENT_SOURCE_DIR}/docs/generated",
     "trim": true,
     "split": true,
     "jsonOutput": true,
