@@ -1,0 +1,13 @@
+{
+    "platforms": {
+        "abstract": "ABC"
+    }, 
+    "frames": {
+        "abstract": "ABCD"
+    },
+    "namespaces": {
+        "global": {
+            "name": "All"
+        }
+    }
+}

@@ -4,17 +4,16 @@
         "root": "templates/templates",
         "platforms": "platforms.adoc",
         "namespaces": "namespaces.adoc",
-        "namespace": "namespaces.adoc"
+        "namespace": "namespace.adoc"
     },
     "lang": "lang_en.json",
+    "custom": "custom.json",
     "output": "${CMAKE_CURRENT_BINARY_DIR}/generated",
     "trim": true,
     "split": true,
     "jsonOutput": true,
-    "files": [
-        "../protos/myschema1.xml",
-        "../protos/myschema2.xml",
-        "../protos/myschema3.xml",
-        "../protos/myschema4.xml"
-    ]
+    "responseFile": {
+        "file": "${schema_SOURCE_DIR}/schema_list.txt",
+        "path": "${schema_SOURCE_DIR}"
+    }
 }
