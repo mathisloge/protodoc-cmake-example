@@ -1,3 +1,0 @@
-[submodule "doc/templates"]
-	path = doc/templates
-	url = https://github.com/mathisloge/protodoc-template-asciidoctor
