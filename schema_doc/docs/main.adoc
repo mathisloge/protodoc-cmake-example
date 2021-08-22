@@ -1,9 +1,0 @@
-= Comms Protocol Test Generation
-Mathis Logemann <mathisloge@gmail.com>
-1.0, August 14, 2021: comms protocol test generation
-:toc: left
-:icons: font
-:stem:
-
-include::generated/platforms.adoc[]
-include::generated/namespaces.adoc[]

@@ -1,0 +1,7 @@
+# ninja log v5
+0	134	6513356346873627	build.ninja	96b23b021b9519ad
+0	145	0	schema_doc/CMakeFiles/generate_doc	7bc1bbc276d6db8c
+0	145	0	D:/dev/protodoc-gen-test/build/schema_doc/CMakeFiles/generate_doc	7bc1bbc276d6db8c
+1	156	6513356346873627	build.ninja	96b23b021b9519ad
+0	1066	0	schema_doc/CMakeFiles/site	e5bd0e515370ebec
+0	1066	0	D:/dev/protodoc-gen-test/build/schema_doc/CMakeFiles/site	e5bd0e515370ebec
