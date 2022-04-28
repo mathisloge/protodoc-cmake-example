@@ -1,6 +1,6 @@
 = Comms Protocol Test Generation
 Mathis Logemann <mathisloge@gmail.com>
-1.0, August 14, 2021: comms protocol test generation
+0.10, April 28, 2022: comms protocol test generation
 :toc: left
 :icons: font
 :stem:
