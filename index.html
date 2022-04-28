@@ -445,8 +445,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Mathis Logemann</span><br>
 <span id="email" class="email"><a href="mailto:mathisloge@gmail.com">mathisloge@gmail.com</a></span><br>
-<span id="revnumber">version 1.0,</span>
-<span id="revdate">August 14, 2021</span>
+<span id="revnumber">version 0.10,</span>
+<span id="revdate">April 28, 2022</span>
 <br><span id="revremark">comms protocol test generation</span>
 </div>
 <div id="toc" class="toc2">
@@ -456,7 +456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_namespace">Namespace</a>
 <ul class="sectlevel3">
 <li><a href="#_frames">Frames</a></li>
-<li><a href="#_fields">Fields</a></li>
+<li><a href="#_global_fields">Global fields</a></li>
 <li><a href="#_messages">Messages</a></li>
 </ul>
 </li>
@@ -480,7 +480,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </div>
 <div class="sect3">
-<h4 id="_fields">Fields</h4>
+<h4 id="_global_fields">Global fields</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -537,45 +537,45 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_MsgId">MsgId</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>Ack: 0</p>
+<p>: 0</p>
 </li>
 <li>
-<p>SimpleInts: 1</p>
+<p>: 1</p>
 </li>
 <li>
-<p>ScaledInts: 2</p>
+<p>: 2</p>
 </li>
 <li>
-<p>Floats: 3</p>
+<p>: 3</p>
 </li>
 <li>
-<p>Enums: 4</p>
+<p>: 4</p>
 </li>
 <li>
-<p>Sets: 5</p>
+<p>: 5</p>
 </li>
 <li>
-<p>Bitfields: 6</p>
+<p>: 6</p>
 </li>
 <li>
-<p>Strings: 7</p>
+<p>: 7</p>
 </li>
 <li>
-<p>Datas: 8</p>
+<p>: 8</p>
 </li>
 <li>
-<p>Lists: 9</p>
+<p>: 9</p>
 </li>
 <li>
-<p>Optionals: 10</p>
+<p>: 10</p>
 </li>
 <li>
-<p>Variants: 11</p>
+<p>: 11</p>
 </li>
 </ul>
 </div></div></td>
@@ -655,7 +655,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_MsgId">MsgId</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>see <a href="#field_MsgId">MsgId</a></p>
@@ -737,6 +737,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_F3Len">F3Len</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Detached length of F3.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F1">F1</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
@@ -774,20 +788,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_F3Len">F3Len</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Detached length of F3.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
@@ -838,7 +838,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F1">F1</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Simple enum with sequential values</p>
@@ -846,13 +846,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>V0: 0</p>
+<p>: 0</p>
 </li>
 <li>
-<p>V1: 1</p>
+<p>: 1</p>
 </li>
 <li>
-<p>V2: 2</p>
+<p>: 2</p>
 </li>
 </ul>
 </div></div></td>
@@ -865,7 +865,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F2">F2</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Enum with signed values</p>
@@ -873,16 +873,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>V1: -1</p>
+<p>: -1</p>
 </li>
 <li>
-<p>V2: 5</p>
+<p>: 5</p>
 </li>
 <li>
-<p>V3: 6</p>
+<p>: 6</p>
 </li>
 <li>
-<p>V4: 7</p>
+<p>: 7</p>
 </li>
 </ul>
 </div></div></td>
@@ -895,7 +895,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F3">F3</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Enum with non-standard length</p>
@@ -903,10 +903,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>V1: 66051</p>
+<p>: 66051</p>
 </li>
 <li>
-<p>V2: 263430</p>
+<p>: 263430</p>
 </li>
 </ul>
 </div></div></td>
@@ -919,7 +919,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F4">F4</strong></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uintvar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enum</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1 - 2</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Enum with variable length</p>
@@ -927,10 +927,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>V1: 0</p>
+<p>: 0</p>
 </li>
 <li>
-<p>V2: 128</p>
+<p>: 128</p>
 </li>
 </ul>
 </div></div></td>
@@ -970,24 +970,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_Distance">Distance</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">float</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_Timeout">Timeout</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">float</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">s</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_Distance">Distance</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">float</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -1023,6 +1023,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_F2Count">F2Count</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F1">F1</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
@@ -1046,18 +1058,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_F2Count">F2Count</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
@@ -1134,6 +1134,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_Flags">Flags</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Flags indicating existence of the fields to follow</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F2">F2</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">optional</p></td>
@@ -1160,25 +1174,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_Flags">Flags</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">set</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Flags indicating existence of the fields to follow</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_scaled_ints">Scaled Ints</h5>
+<h5 id="_scaledints">ScaledInts</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 18.1818%;">
@@ -1205,20 +1205,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_Height">Height</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Height above ellipsoid in mm</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_Lat">Lat</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
@@ -1242,6 +1228,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_Height">Height</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Height above ellipsoid in mm</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
@@ -1334,7 +1334,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect4">
-<h5 id="_simple_ints">Simple Ints</h5>
+<h5 id="_simpleints">SimpleInts</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 18.1818%;">
@@ -1366,20 +1366,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_F10">F10</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uintvar</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 - 4</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Using little endian (LEB-128) to encode this field.</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
@@ -1481,6 +1467,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_F10">F10</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uintvar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 - 4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Using little endian (LEB-128) to encode this field.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1510,6 +1510,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong id="field_F4Len">F4Len</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Detached length of F4.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong id="field_F1">F1</strong></p>
@@ -1563,20 +1577,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong id="field_F4Len">F4Len</strong></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uint</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Detached length of F4.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$frac(1)(1)\$</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
@@ -1659,8 +1659,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0<br>
-Last updated 2021-08-22 13:39:04 +0200
+Version 0.10<br>
+Last updated 2022-04-28 21:46:21 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
